@@ -1,0 +1,313 @@
+/* Reset global de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: -apple-system, sans-serif;
+}
+
+/* Variables de color */
+:root {
+  --bg-color: #ffffff;
+  --snd-bg-color: #f8f8f8;
+  --text-color: #000000;
+  --main-color: #161616;
+
+/* Navbar */
+.navbar {
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--bg-color);
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5px; /* Asegura espacio entre logo y texto */
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.nombre {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin: 0;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 13px 15px;
+  background: var(--main-color);
+  color: var(--snd-bg-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.nav-btn:hover {
+  background-color: #444;
+}
+
+.top-btn {
+  color: var(--snd-bg-color);
+  text-decoration: none;
+}
+
+/* Sección de Inicio e Imagen lado a lado */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 50px auto; /* Centra la sección horizontalmente */
+  padding-top: 30px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Asegura que el texto dentro del contenedor esté centrado */
+}
+
+.home-content h3 {
+  font-size: 3rem; /* Ajustar tamaño de fuente */
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px; /* Reducimos el espacio entre el texto y la siguiente sección */
+}
+
+.home-content p {
+  font-size: 1.3rem; /* Ajustamos tamaño de fuente */
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+  margin-bottom: 10px; /* Reducimos el espacio entre el texto y el botón */
+  line-height: 1.5;
+  width: 80%;
+}
+
+.roundbob img {
+  max-width: 100%;
+  height: 1200;
+  width: 1200px; /* Ajustar el tamaño de la imagen */
+}
+
+.trabajo {
+  margin: 30px;
+}
+.foto-home {
+  border-radius: 20px;
+  max-width: 1300px; /* Ajusta el tamaño máximo de la imagen */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina espacios en línea */
+  margin: 0 auto; /* Centra horizontalmente */
+  margin-bottom: 60px;
+}
+
+/*Seccion de Servicios*/
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 40%;
+  padding: 20px 0;
+  min-height: 50vh; /* Ajusta la altura mínima */
+  background-color: var(--snd-bg-color);
+}
+
+.titulo-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Asegura que el texto dentro del contenedor esté centrado */
+}
+
+.titulo-servicios h2 {
+  font-size: 2.7rem; /* Ajustar tamaño de fuente */
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px; /* Reducimos el espacio entre el texto y la siguiente sección */
+  margin-left: -100px;
+}
+
+.encabezado i {
+  color: #978d02;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem; /* Ajustamos tamaño de fuente */
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--snd-bg-color);
+  color: #000000;
+  line-height: 1.5;
+  width: 600px;
+}
+
+.fullbob {
+  position: relative;
+  width: 350px; /* Puedes ajustar el tamaño según necesites */
+  height: 350px; /* Puedes ajustar el tamaño según necesites */
+}
+
+.fullbob .img {
+  max-width: 100%;
+  width: 350px;
+  max-height: 350px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.fullbob .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 350px;
+  max-height: 350px;
+  object-fit: contain;
+  opacity: 0; /* Inicialmente está oculta */
+  transition: opacity 0.5s ease;
+}
+
+.fullbob:hover .img {
+  opacity: 0; /* La imagen original se hace invisible al hacer hover */
+transition: 0.5s;
+}
+
+.fullbob:hover .img-hover {
+  opacity: 1; /* La imagen de hover se vuelve visible */
+  transition: 0.5s;
+}
+
+.inicio-servicios {
+  background: var(--snd-bg-color);
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centrar el texto dentro del contenedor */
+  margin: none;
+}
+
+.servicios-texto {
+  background: var(--snd-bg-color);
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centrar el texto dentro del contenedor */
+}
+
+/*Contenido de los servicios*/
+
+.servicios {
+  background: var(--snd-bg-color);
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 80vh; /* Ocupar toda la altura de la pantalla */
+  text-align: center; /* Centrar el texto dentro del contenedor */
+  margin: none;
+}
+
+.contenido-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.3rem;
+  margin-top: 0;
+}
+
+.row {
+  background: var(--snd-bg-color);
+  border-radius: 27px;
+  box-shadow: none;
+  padding: 20px;
+  transition: all 0.5s ease;
+  line-height: 1.5;
+  width: 400px;
+  text-align: left;
+}
+
+.row img {
+  height: auto;
+  width: 100%;
+  border-radius: 27px;
+  margin-bottom: 1.4rem;
+}
+
+.row i {
+  color: #444;
+}
+
+.row h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #444;
+  font-family: "Times New Roman", Times, serif;
+}
+.row p {
+  margin-top: 10px;
+  color: var(--main-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.row:hover {
+  border: 1px none var(--snd-bg-color);
+  transform: translateY(-5px) scale(1.04);
+  cursor: pointer;
+  color: #978d02;
+}
+
+.obras h3 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 50px;
+  font-size: 38px;
+}
+
+.obras img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
